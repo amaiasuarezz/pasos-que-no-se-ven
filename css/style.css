@@ -1,5 +1,24 @@
+@font-face {
+    font-family: 'arkitekt';
+    src: url('arkitekt-regular_2-webfont.woff2') format('woff2'),
+         url('arkitekt-regular_2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'neuehaasgrotesktext';
+    src: url('neue_haas_grotesk_text_regular-webfont.woff2') format('woff2'),
+         url('neue_haas_grotesk_text_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
-    --font-base: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+    --font-base: 'neuehaasgrotesktext', sans-serif;
+    --font-heading: 'arkitekt', serif;
     --color-text: #FFF;
     --color-bg: #000;
 }
@@ -20,6 +39,8 @@ a {
 
 /* Títulos responsive */
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
     font-weight: 800;
 }
 
