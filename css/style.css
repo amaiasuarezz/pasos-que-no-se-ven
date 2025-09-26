@@ -73,13 +73,22 @@ h6 {
 code {
     background: var(--color-bg);
 }
-
+.fotographer {
+    position: absolute;
+    left: 0;
+    color: white;
+}
 img {
     max-width: 100%;
     height: auto;
+    width: 100%;
+    aspect-ratio: 1 / 1.4;
+    object-fit: cover;
 }
 /* layout */
-
+p {
+    max-width: 720px;
+}
 header#main-header nav {
     text-align: center;
     display: flex;
@@ -203,6 +212,7 @@ footer#main-footer {
 
 /* Espaciado mejorado para secciones */
 section {
+    display: flex;
     margin-bottom: 2rem;
 }
 
@@ -233,4 +243,21 @@ section h3 {
 section h4 {
     color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
+}
+
+.testimonio {
+    list-style: decimal-leading-zero;
+    padding: 0;
+}
+.testimonio li {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+}
+.testimonio p {
+    margin: 0.25em 0;
+}
+
+.testimonio b {
+    font-weight: 900;
+    text-decoration: underline
 }
