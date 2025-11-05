@@ -7,20 +7,15 @@
 
 }
 
-@font-face {
-    font-family: 'neuehaasgrotesktext';
-    src: url('neue_haas_grotesk_text_regular-webfont.woff2') format('woff2'),
-         url('neue_haas_grotesk_text_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 :root {
-    --font-base: 'neuehaasgrotesktext', sans-serif;
+    --font-base: "neue-haas-grotesk-text", sans-serif;
     --font-heading: 'arkitekt', serif;
     --color-text: #FFF;
     --color-bg: #000;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /* Estilos default */
@@ -35,6 +30,12 @@ body {
 a {
     color: var(--color-text);
     text-decoration: none;
+}
+
+#logo {
+    display: inline-block;
+    width: 100%;
+    padding: 1em;
 }
 
 /* Títulos responsive */
@@ -82,8 +83,6 @@ img {
     max-width: 100%;
     height: auto;
     width: 100%;
-    aspect-ratio: 1 / 1.4;
-    object-fit: cover;
 }
 /* layout */
 p {
