@@ -20,8 +20,9 @@
      height: 100%;
      object-fit: cover;
  }
-
+.toggle-audio-btn,
  .download-link {
+    margin: 1em;
     background-color: #fff;
     color: #000;
     cursor: pointer;
@@ -31,9 +32,32 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
  }
 
+ .toggle-audio-btn {
+    position: relative;
+    margin: 0;
+    padding: 0;
+ }
+
+.toggle-audio-btn:hover,
  .download-link:hover {
     background-color: #000;
     color: #fff;
+    
+ }
+
+ .swiper-pagination {
+    pointer-events: none;
+ }
+
+ .swiper-pagination .swiper-pagination-bullet {
+    pointer-events: all;
+ }
+
+ .swiper-pagination-bullet-active {
+    background: #000;
  }
