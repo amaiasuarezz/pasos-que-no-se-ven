@@ -50,6 +50,21 @@
     
  }
 
+/* Estados del botón de audio */
+.toggle-audio-btn.audio-playing {
+    background-color: #000;
+    color: #fff;
+}
+
+.toggle-audio-btn.audio-paused {
+    background-color: #fff;
+    color: #000;
+}
+
+.toggle-audio-btn.audio-playing:hover {
+    background-color: #333;
+}
+
  .swiper-pagination {
     pointer-events: none;
  }
