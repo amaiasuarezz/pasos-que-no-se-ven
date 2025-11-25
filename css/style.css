@@ -93,6 +93,7 @@ audio {
 p {
     max-width: 720px;
 }
+
 header#main-header nav {
     text-align: center;
     display: flex;
@@ -101,6 +102,50 @@ header#main-header nav {
     padding: 1em 0;
 }
 
+#nav-menu {
+    position: fixed;
+    right: 3em;
+    top: 30%;
+    width: 200px;
+    background: red;
+    z-index: 9;
+    pointer-events: none;
+}
+
+
+#nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+}
+#menu-button{
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+    pointer-events: auto;
+}
+
+#menu-button:hover,
+#menu-button.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+#menu-button.active + ul {
+    opacity: 1;
+    pointer-events: auto;
+}
+#nav-menu ul {
+    transition: opacity 0.3s ease;
+}
 footer#main-footer {
     border-top: 1px solid var(--color-text);
     margin-top: 2em;
