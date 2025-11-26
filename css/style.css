@@ -118,6 +118,8 @@ header#main-header nav {
     opacity: 0;
     pointer-events: none;
 }
+
+
 #menu-button{
     width: 42px;
     height: 42px;
@@ -141,6 +143,11 @@ header#main-header nav {
 #menu-button.active {
     background-color: #000000;
     color: #ffffff;
+}
+
+.small-note {
+  font-size: 0.75rem;
+  opacity: 0.6;
 }
 .cerrar-icon {
     display: none;
