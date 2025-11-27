@@ -31,11 +31,17 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 #logo {
     display: inline-block;
     width: 100%;
     padding: 1em;
 }
+
 
 /* Títulos responsive */
 h1, h2, h3 {
@@ -51,7 +57,6 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin: 2em 0 1em 0;
 }
 
 h3 {
@@ -87,6 +92,10 @@ img {
 audio {
     position: absolute;
     visibility: hidden;
+}
+.full-width-image {
+    margin: 3rem 0;
+    padding: 1em;
 }
 /* layout */
 p {
@@ -262,6 +271,10 @@ footer#main-footer {
     }
 }
 
+.proyecto h2 {
+    margin: 2em 0 1em 0;
+}
+
 .nav-link:hover {
     text-decoration: underline;
 }
@@ -330,3 +343,23 @@ section h4 {
     font-weight: 900;
     text-decoration: underline
 }
+
+
+ #lista-nombres {
+
+ }
+
+
+ #lista-nombres ul {
+    list-style: none;
+ }
+
+ #main-footer {
+    padding: 3em 0;
+ }
+
+
+ #main-footer ul {
+    margin-left: 3em;
+    list-style: none;
+ }
