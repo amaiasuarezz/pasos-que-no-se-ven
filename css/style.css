@@ -1,15 +1,14 @@
 @font-face {
-    font-family: 'arkitekt';
-    src: url('arkitekt-regular_2-webfont.woff2') format('woff2'),
-         url('arkitekt-regular_2-webfont.woff') format('woff');
+    font-family: 'Steps';
+    src: url('Steps-Regular.woff2') format('woff2');
+         
     font-weight: normal;
     font-style: normal;
-
 }
 
 :root {
     --font-base: "neue-haas-grotesk-text", sans-serif;
-    --font-heading: 'arkitekt', serif;
+    --font-heading: 'Steps', serif;
     --color-text: #FFF;
     --color-bg: #000;
 }
@@ -39,7 +38,7 @@ a {
 }
 
 /* Títulos responsive */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-family: var(--font-heading);
     color: var(--color-text);
     font-weight: 800;
@@ -47,13 +46,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5rem;
-    font-weight: 800;
+     margin: 2em 0 1em 0;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 7px;
+    margin: 2em 0 1em 0;
 }
 
 h3 {
@@ -80,6 +78,7 @@ code {
     left: 0;
     color: white;
 }
+video,
 img {
     max-width: 100%;
     height: auto;
@@ -93,6 +92,7 @@ audio {
 p {
     max-width: 720px;
 }
+
 header#main-header nav {
     text-align: center;
     display: flex;
@@ -101,6 +101,70 @@ header#main-header nav {
     padding: 1em 0;
 }
 
+#nav-menu {
+    position: fixed;
+    right: 3em;
+    top: 30%;
+    width: 200px;
+    z-index: 9;
+    pointer-events: none;
+}
+
+
+#nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+#menu-button{
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-button img {
+    width: 60%;
+}
+#menu-button:hover,
+#menu-button.active {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.small-note {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+.cerrar-icon {
+    display: none;
+}
+#menu-button.active .hamburguer-icon {
+    display: none;
+}
+#menu-button.active .cerrar-icon {
+    display: block;
+}
+#menu-button.active + ul {
+    opacity: 1;
+    pointer-events: auto;
+}
+#nav-menu ul {
+    transition: opacity 0.3s ease;
+}
 footer#main-footer {
     border-top: 1px solid var(--color-text);
     margin-top: 2em;
