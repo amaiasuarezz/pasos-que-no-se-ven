@@ -94,7 +94,7 @@ audio {
     visibility: hidden;
 }
 .full-width-image {
-    margin: 3rem 0;
+    margin: 40rem  0 20em 0;
     padding: 1em;
 }
 /* layout */
@@ -362,4 +362,5 @@ section h4 {
  #main-footer ul {
     margin-left: 3em;
     list-style: none;
+     text-align: left;
  }
