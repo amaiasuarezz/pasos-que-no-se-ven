@@ -24,6 +24,7 @@ body {
     background: var(--color-bg);
     padding: 0;
     margin: 0;
+    font-size: 2em;
 }
 
 a {
@@ -94,7 +95,7 @@ audio {
     visibility: hidden;
 }
 .full-width-image {
-    margin: 40rem  0 20em 0;
+    margin: 20vh  0 30vh 0;
     padding: 1em;
 }
 /* layout */
