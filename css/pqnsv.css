@@ -1,4 +1,7 @@
-#preloader {
+body {
+    overflow: hidden;
+}
+#intro {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,17 +14,26 @@
     mix-blend-mode: screen;
 }
 
+#logo svg {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    opacity: 0;
+}
+
 #enter-button {
     aspect-ratio: 1/1;
-    color: transparent;
     width: 100px;
     height: auto;
     background: black;
+    color: white;
     border-radius: 50%;
     display: inline;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 1em;
+    transform: translate(-50%, -100%);
     position: absolute;
     margin: 0;
     padding: 0;
@@ -40,4 +52,13 @@
     left: 0;
     width: 100%;
     margin-top: calc( 50vh - calc(100vw * .05) );
+    z-index: 1000;
+    pointer-events: none; /* No interactivo hasta que se inicie la animación */
+}
+
+#main-header.in-top {
+    pointer-events: all;
+    position: sticky;
+    top: 0;
+    mix-blend-mode: difference;
 }
