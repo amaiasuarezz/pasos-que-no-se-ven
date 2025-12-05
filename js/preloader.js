@@ -18,4 +18,4 @@ const timeline = gsap.timeline({
     }
 }, 0);
 
-window.addEventListener('load', () => timeline.play());
+enterButton.addEventListener('click', () => timeline.play());

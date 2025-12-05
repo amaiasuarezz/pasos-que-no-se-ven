@@ -1,0 +1,83 @@
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    overflow: visible;
+    pointer-events: auto;
+}
+
+#enter-button {
+    aspect-ratio: 1/1;
+    color: transparent;
+    width: 100px;
+    height: auto;
+    background: white;
+    border-radius: 50%;
+    display: inline;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+    will-change: width, height;
+}
+
+/* Animación yoyo de carga del botón */
+#enter-button.loading {
+    mix-blend-mode: multiply;
+    animation: pulse-opacity 0.8s ease-in-out infinite;
+}
+
+/* Preloader oculto */
+#preloader.hidden {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.8s;
+}
+
+/* Keyframes para animación de opacidad pulsante */
+@keyframes pulse-opacity {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Keyframes para expansión del círculo */
+@keyframes expand-circle {
+    0% {
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+    100% {
+        /* Calcular el tamaño necesario para cubrir toda la pantalla diagonalmente */
+        /* Usamos vmax (el mayor entre vw y vh) multiplicado para asegurar cobertura completa */
+        width: 200vmax;
+        height: 200vmax;
+        opacity: 1;
+    }
+}
+
+
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: calc( 50vh - calc(100vw * .05) );
+    z-index: 1000;
+}
