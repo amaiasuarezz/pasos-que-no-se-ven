@@ -8,7 +8,7 @@ const logoSvg = document.getElementById('logo-svg');
 const paths = logoSvg.querySelectorAll('path');
 
 // Configuración de las variables para la interacción
-const maxDistance = 500; // Distancia máxima para considerar el efecto (en píxeles)
+const maxDistance = 800; // Distancia máxima para considerar el efecto (en píxeles)
 // Obtener posición inicial del cursor (centro de la pantalla)
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;

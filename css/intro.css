@@ -1,0 +1,31 @@
+main {
+    opacity: 0;
+}
+
+body {
+    overflow: hidden;
+}
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    overflow: hidden;
+    pointer-events: auto;
+    mix-blend-mode: screen;
+}
+
+#main-header {
+    margin-top: calc( 50vh - calc(100vw * .05) );
+    pointer-events: none; /* No interactivo hasta que se inicie la animación */
+}
+
+#main-header.in-top {
+    pointer-events: all;
+    position: relative;
+    top: 0;
+    mix-blend-mode: difference;
+}
